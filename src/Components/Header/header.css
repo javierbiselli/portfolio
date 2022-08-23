@@ -1,0 +1,56 @@
+.headerBox {
+    width: 100%;
+    position: fixed;
+    height: auto;
+    padding: 10px 0;
+    top: 0;
+    z-index: 20;
+    transition: .3s;
+}
+
+.active {
+    background-color: rgb(36, 36, 36);
+}
+
+.headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+.h1Container {
+    margin-right: 40px;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    font-weight: lighter;
+}
+
+.headerContainer ul {
+    display: flex;
+    flex-basis: 400px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.buttonContainer button {
+    background-color: transparent;
+    padding: 10px 20px;
+    cursor: pointer;
+    color:  rgb(233, 233, 233);
+    border-color:  rgb(233, 233, 233);
+    font-size: 0.8rem;
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.buttonContainer button:hover {
+    color: rgb(255, 255, 255);
+    border: 2px solid rgba(175, 102, 243, .0);
+}
