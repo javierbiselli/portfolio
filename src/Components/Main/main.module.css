@@ -31,3 +31,14 @@ p button {
 p button:hover {
     color: rgb(175, 102, 243);
 }
+
+@media only screen and (max-width: 768px) {
+    .mainContainer {
+        width: 75%;
+        margin: auto;
+    }
+
+    .mainContainer section p {
+        font-size: 1.6rem;
+    }
+}

@@ -1,7 +1,7 @@
 .headerBox {
     width: 100%;
     position: fixed;
-    height: auto;
+    height: 66.7px;
     padding: 10px 0;
     top: 0;
     z-index: 20;
@@ -17,10 +17,12 @@
     justify-content: space-between;
     align-items: center;
     width: 90%;
+    height: 66.7px;
     margin: auto;
 }
 
 .h1Container {
+    width: 30%;
     margin-right: 40px;
 }
 
@@ -32,41 +34,27 @@ h1 {
     font-weight: lighter;
 }
 
-.headerContainer ul {
-    display: flex;
-    flex-basis: 400px;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.buttonContainer button {
+.menuButton {
+    display: none;
     background-color: transparent;
-    padding: 10px 20px;
-    cursor: pointer;
-    color:  rgb(222, 222, 222);
-    font-size: 0.8rem;
-    transition: .2s;
     border: none;
+    font-size: 2.4rem;
+    color: white;
 }
 
-.buttonContainer button:hover {
-    color: rgb(255, 255, 255);
-}
 
-.languageContainer {
-    position: relative;
-    left: 10px;
-    margin-left: 30px;
-}
+@media only screen and (max-width: 768px) {
+    .h1Container {
+        width: 100%;
+    }
 
-.languageContainer select {
-    background: transparent;
-    border: none;
-    color: rgb(222, 222, 222);
-    font-size: 0.75rem;
-}
+    h1 {
+        font-size: 1rem;
+        position: relative;
+        left: 5px;
+    }
 
-.inactive {
-    background-color: #491616;
+    .menuButton {
+        display: inherit;
+    }
 }
