@@ -27,7 +27,7 @@
 h1 {
     padding: 0;
     margin: 0;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: rgb(255, 255, 255);
     font-weight: lighter;
 }
@@ -35,6 +35,7 @@ h1 {
 .headerContainer ul {
     display: flex;
     flex-basis: 400px;
+    align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -43,14 +44,29 @@ h1 {
     background-color: transparent;
     padding: 10px 20px;
     cursor: pointer;
-    color:  rgb(233, 233, 233);
-    border-color:  rgb(233, 233, 233);
+    color:  rgb(222, 222, 222);
     font-size: 0.8rem;
-    border-radius: 3px;
-    transition: .3s;
+    transition: .2s;
+    border: none;
 }
 
 .buttonContainer button:hover {
     color: rgb(255, 255, 255);
-    border: 2px solid rgba(175, 102, 243, .0);
+}
+
+.languageContainer {
+    position: relative;
+    left: 10px;
+    margin-left: 30px;
+}
+
+.languageContainer select {
+    background: transparent;
+    border: none;
+    color: rgb(222, 222, 222);
+    font-size: 0.75rem;
+}
+
+.inactive {
+    background-color: #491616;
 }

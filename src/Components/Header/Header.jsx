@@ -24,6 +24,12 @@ const Header = () => {
                     <li><button>MY PROJECTS</button></li>
                     <li><button>RESUME</button></li>
                     <li><button>CONTACT</button></li>
+                    <div className="languageContainer">
+                        <select name="language" id="language">
+                            <option className={headerBackground ? 'active' : 'inactive'} value="english">English</option>
+                            <option className={headerBackground ? 'active' : 'inactive'} value="espanol">Español</option>
+                        </select>
+                    </div>
                 </ul>
             </header>
         </div>

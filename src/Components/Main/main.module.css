@@ -3,13 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    z-index: 10;
     height: 100vh;
-    top: 40px;
 }
 
-section {
+.mainContainer section {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -17,7 +14,7 @@ section {
     color: white;
 }
 
-section p {
+.mainContainer section p {
     font-size: 2.4rem;
 }
 
