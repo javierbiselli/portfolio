@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './modal.module.css';
+import React from "react";
+import styles from "./modal.module.css";
 
 const Modal = ({ children, isOpen, handleClose }) => {
   if (!isOpen) {
@@ -10,7 +10,7 @@ const Modal = ({ children, isOpen, handleClose }) => {
     <div className={styles.shade}>
       <div className={styles.billboard}>
         <button onClick={handleClose} className={styles.btnX}>
-            X
+          X
         </button>
         <div className={styles.content}>{children}</div>
       </div>

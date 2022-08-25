@@ -1,118 +1,117 @@
 .navBarContainer ul {
-    display: flex;
-    flex-basis: 400px;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  flex-basis: 400px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .navBarContainer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 90%;
-    height: 66.7px;
-    margin: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 90%;
+  height: 66.7px;
+  margin: auto;
 }
 
 .buttonContainer button {
-    background-color: transparent;
-    padding: 10px 20px;
-    cursor: pointer;
-    color:  rgb(222, 222, 222);
-    font-size: 0.8rem;
-    transition: .2s;
-    border: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: rgb(222, 222, 222);
+  font-size: 0.8rem;
+  transition: 0.2s;
+  border: none;
 }
 
 .buttonContainer button:hover {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .languageContainer {
-    position: relative;
-    left: 10px;
-    margin-left: 30px;
+  position: relative;
+  left: 10px;
+  margin-left: 30px;
 }
 
 .languageContainer select {
-    background: transparent;
-    border: none;
-    color: rgb(222, 222, 222);
-    font-size: 0.75rem;
+  background: transparent;
+  border: none;
+  color: rgb(222, 222, 222);
+  font-size: 0.75rem;
 }
 
 .inactive {
-    background-color: #491616;
+  background-color: #491616;
 }
 
 .navBarMenuContainer {
-    position: absolute;
-    justify-content: center;
-    right: 0;
-    top: 86px;
-    width: 40%;
-    height: 100vh;
-    background-color: rgba(36, 36, 36, 0.9);
-    color: white;
+  position: absolute;
+  justify-content: center;
+  right: 0;
+  top: 86px;
+  width: 40%;
+  height: 100vh;
+  background-color: rgba(36, 36, 36, 0.9);
+  color: white;
 }
 
 .navBarMenuContainer ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .navBarMenuContainer ul li {
-    margin: 5px;
-    padding: 0;
+  margin: 5px;
+  padding: 0;
 }
 
 .buttonMenuContainer {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .buttonMenuContainer button {
-    background-color: transparent;
-    cursor: pointer;
-    color:  rgb(222, 222, 222);
-    font-size: 0.8rem;
-    transition: .2s;
-    border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: rgb(222, 222, 222);
+  font-size: 0.8rem;
+  transition: 0.2s;
+  border: none;
 }
 
 .buttonMenuContainer button:hover {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
 .languageMenuContainer select {
-    background: transparent;
-    position: relative;
-    left: 30px;
-    border: none;
-    color: rgb(222, 222, 222);
-    font-size: 0.75rem;
-    margin-top: 20px;
-    margin-bottom: 5px;
+  background: transparent;
+  position: relative;
+  left: 30px;
+  border: none;
+  color: rgb(222, 222, 222);
+  font-size: 0.75rem;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 
-
 @media only screen and (max-width: 768px) {
-    .buttonContainer {
-        position: absolute;
-    }
+  .buttonContainer {
+    position: absolute;
+  }
 
-    .buttonContainer li {
-        display: none;
-    }
+  .buttonContainer li {
+    display: none;
+  }
 
-    .buttonContainer div {
-        display: none;
-    }
+  .buttonContainer div {
+    display: none;
+  }
 
-    .navBarMenuContainer {
-        display: inherit;
-    }
+  .navBarMenuContainer {
+    display: inherit;
+  }
 }
