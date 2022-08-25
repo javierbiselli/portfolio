@@ -15,7 +15,6 @@
 
 .billboard {
   overflow: auto;
-  max-height: 100%;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -30,6 +29,7 @@
   border: none;
   padding: 10px;
   cursor: pointer;
+  background-color: #f0f0f0;
 }
 
 .content {
@@ -58,4 +58,21 @@
 .content a:hover {
   color: rgb(175, 102, 243);
   border-bottom: 1px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+  .billboard {
+    max-width: 90%;
+  }
+  .content h2 {
+    font-size: 1.4rem;
+  }
+
+  .content a {
+    font-size: 1.1rem;
+  }
+
+  .content {
+    padding: 5px 20px;
+  }
 }

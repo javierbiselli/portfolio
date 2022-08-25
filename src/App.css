@@ -5,6 +5,8 @@
 .App {
   width: 100%;
   margin: auto;
+  background: linear-gradient(180deg, #491616, #ad1616);
+  background-repeat: no-repeat;
 }
 
 a {

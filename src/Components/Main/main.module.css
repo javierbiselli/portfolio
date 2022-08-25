@@ -9,6 +9,8 @@
 .mainContainer section {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   max-width: 700px;
   color: white;
@@ -18,7 +20,7 @@
   font-size: 2.4rem;
 }
 
-p button {
+.mainContainer section p button {
   border: none;
   background: transparent;
   color: white;
@@ -28,7 +30,7 @@ p button {
   transition: 0.3s;
 }
 
-p button:hover {
+.mainContainer section p button:hover {
   color: rgb(175, 102, 243);
 }
 
@@ -40,5 +42,14 @@ p button:hover {
 
   .mainContainer section p {
     font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-height: 460px) {
+  .mainContainer section p {
+    font-size: 1.2rem;
+  }
+  .mainContainer section p button {
+    font-size: 1.2rem;
   }
 }
