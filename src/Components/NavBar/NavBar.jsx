@@ -1,10 +1,8 @@
 import "./navBar.css";
 
 const NavBar = ({ navBar }) => {
-  console.log(navBar);
   return (
     <>
-      {" "}
       {navBar ? (
         <div className="navBarMenuContainer">
           <ul className="buttonMenuContainer">
