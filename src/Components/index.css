@@ -1,4 +1,4 @@
-.App {
+.app {
   width: 100%;
   margin: auto;
   background: linear-gradient(180deg, #491616, #ad1616);
@@ -10,6 +10,6 @@ a {
   color: white;
 }
 
-.App ul {
+.app ul {
   list-style: none;
 }

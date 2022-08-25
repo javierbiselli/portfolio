@@ -13,7 +13,7 @@ const Projects = () => {
   };
 
   return (
-    <div className={styles.projectsContainer}>
+    <div className={styles.projectsContainer} id="ProjectsSection">
       <h3>My projects</h3>
       <section>
         <div id="Divirta" className={styles.project} onClick={onClick}>

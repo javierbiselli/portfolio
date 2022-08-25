@@ -1,24 +1,34 @@
 import "./navBar.css";
 
 const NavBar = ({ navBar }) => {
+  const changeLanguage = (option) => {
+    localStorage.setItem("lang", option.target.value);
+    window.location.reload();
+  };
+  const lang = localStorage.getItem("lang") || "en";
   return (
     <>
       {navBar ? (
         <div className="navBarMenuContainer">
           <ul className="buttonMenuContainer">
             <li>
-              <button>- MY PROJECTS</button>
+              <a href="#ProjectsSection">- My projects</a>
             </li>
             <li>
-              <button>- RESUME</button>
+              <a href="#ProjectsSection">- Resume</a>
             </li>
             <li>
-              <button>- CONTACT</button>
+              <a href="#ProjectsSection">- Contact</a>
             </li>
             <div className="languageMenuContainer">
-              <select name="language" id="language">
-                <option value="english">English</option>
-                <option value="espanol">Español</option>
+              <select
+                name="language"
+                id="language"
+                onChange={changeLanguage}
+                value={lang}
+              >
+                <option value="en">English</option>
+                <option value="es">Español</option>
               </select>
             </div>
           </ul>
@@ -27,16 +37,21 @@ const NavBar = ({ navBar }) => {
         <div className="navBarContainer">
           <ul className="buttonContainer">
             <li>
-              <button>MY PROJECTS</button>
+              <a href="#ProjectsSection">MY PROJECTS</a>
             </li>
             <li>
-              <button>RESUME</button>
+              <a href="#ProjectsSection">RESUME</a>
             </li>
             <li>
-              <button>CONTACT</button>
+              <a href="#ProjectsSection">CONTACT</a>
             </li>
             <div className="languageContainer">
-              <select name="language" id="language">
+              <select
+                name="language"
+                id="language"
+                onChange={changeLanguage}
+                value={lang}
+              >
                 <option value="english">English</option>
                 <option value="espanol">Español</option>
               </select>
