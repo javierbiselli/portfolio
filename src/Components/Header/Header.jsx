@@ -20,7 +20,9 @@ const Header = () => {
     <div className={headerBackground ? "headerBox active" : "headerBox"}>
       <header className="headerContainer">
         <div className="h1Container">
-          <h1>JAVIER BISELLI</h1>
+          <h1>
+            <a href="#home">JAVIER BISELLI</a>
+          </h1>
         </div>
         <NavBar navBar={navBar} />
         <button className="menuButton" onClick={() => setNavBar(!navBar)}>

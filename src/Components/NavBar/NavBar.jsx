@@ -12,10 +12,10 @@ const NavBar = ({ navBar }) => {
         <div className="navBarMenuContainer">
           <ul className="buttonMenuContainer">
             <li>
-              <a href="#ProjectsSection">- My projects</a>
+              <a href="#ProjectSectionScroll">- My projects</a>
             </li>
             <li>
-              <a href="#ProjectsSection">- Resume</a>
+              <a href="#ResumeSection">- Resume</a>
             </li>
             <li>
               <a href="#ProjectsSection">- Contact</a>
@@ -37,10 +37,10 @@ const NavBar = ({ navBar }) => {
         <div className="navBarContainer">
           <ul className="buttonContainer">
             <li>
-              <a href="#ProjectsSection">MY PROJECTS</a>
+              <a href="#ProjectSectionScroll">MY PROJECTS</a>
             </li>
             <li>
-              <a href="#ProjectsSection">RESUME</a>
+              <a href="#ResumeSection">RESUME</a>
             </li>
             <li>
               <a href="#ProjectsSection">CONTACT</a>

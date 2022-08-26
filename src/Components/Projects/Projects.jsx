@@ -14,6 +14,10 @@ const Projects = () => {
 
   return (
     <div className={styles.projectsContainer} id="ProjectsSection">
+      <div
+        id="ProjectSectionScroll"
+        className={styles.projectSectionScroll}
+      ></div>
       <h3>My projects</h3>
       <section>
         <div id="Divirta" className={styles.project} onClick={onClick}>

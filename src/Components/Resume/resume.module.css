@@ -1,0 +1,175 @@
+.wholeResumeContainer {
+  height: calc(100vh - 85px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wholeResumeContainer h4 {
+  font-size: 1.7rem;
+  color: white;
+  margin: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-left: 20px;
+}
+
+.resumeContainer {
+  color: white;
+  width: 90%;
+  margin: auto;
+}
+
+.resumeList h5,
+.resumeListBack h5,
+.resumeListNoImg h5 {
+  font-size: 1.6rem;
+  margin-top: 50px;
+}
+
+.resumeListContainer {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: auto;
+}
+
+.resumeList {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  flex-basis: 45%;
+}
+
+.resumeList ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.resumeList ul li,
+.resumeListBack ul li {
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.resumeList img,
+.resumeListBack img {
+  width: 80%;
+  min-width: 90px;
+  max-width: 200px;
+}
+
+.resumeListBack {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  flex-grow: 2;
+}
+
+.resumeListBack ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.resumeListNoImg {
+  width: 100%;
+  text-align: center;
+}
+
+.resumeListNoImg ul {
+  flex-direction: column;
+}
+
+.resumeListNoImg ul li {
+  font-size: 1.2rem;
+}
+
+.resumeListNoImg ul {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .wholeResumeContainer h4 {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 20px;
+  }
+  .resumeContainer {
+    width: 95%;
+  }
+
+  .resumeListContainer {
+    flex-direction: column;
+  }
+
+  .resumeList img,
+  .resumeListBack img {
+    width: 45%;
+    min-width: 30px;
+  }
+
+  .resumeList ul {
+    padding: 0;
+    text-align: center;
+  }
+
+  .resumeList ul li {
+    padding: 0;
+    margin: 0;
+  }
+  .resumeListContainer h5 {
+    margin: 10px;
+  }
+
+  .resumeListNoImg {
+    text-align: start;
+  }
+  .resumeListNoImg ul li {
+    font-size: 1rem;
+  }
+
+  .resumeListNoImg ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+  }
+
+  .resumeList h5,
+  .resumeListBack h5,
+  .resumeListNoImg h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-height: 460px) {
+  .resumeList img,
+  .resumeListBack img {
+    width: 40%;
+    min-width: 25px;
+    max-width: 90px;
+  }
+  .resumeListContainer {
+    flex-direction: row;
+  }
+
+  .resumeList h5,
+  .resumeListBack h5,
+  .resumeListNoImg h5 {
+    font-size: 0.8rem;
+  }
+
+  .resumeListNoImg ul li {
+    font-size: 0.6rem;
+  }
+
+  .wholeResumeContainer h4 {
+    font-size: 1.1rem;
+  }
+  .resumeListNoImg {
+    display: flex;
+  }
+}

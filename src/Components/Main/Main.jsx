@@ -2,7 +2,7 @@ import styles from "./main.module.css";
 
 const Main = () => {
   return (
-    <div className={styles.mainContainer}>
+    <div className={styles.mainContainer} id="home">
       <section>
         <p>
           Hi, i'm Javier, a full stack developer trainee, currently working on
