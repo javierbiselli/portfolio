@@ -9,7 +9,7 @@
 }
 
 .active {
-  background-color: rgb(36, 36, 36);
+  background-color: rgb(14, 14, 14);
 }
 
 .headerContainer {
@@ -55,5 +55,17 @@ h1 {
 
   .menuButton {
     display: inherit;
+  }
+
+  .headerBox {
+    height: 45px;
+  }
+
+  .active {
+    background-color: rgb(14, 14, 14);
+  }
+
+  .headerContainer {
+    height: 45px;
   }
 }

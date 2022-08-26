@@ -1,5 +1,5 @@
 .projectsContainer {
-  background-color: rgb(31, 40, 51);
+  background-color: rgb(14, 1, 22);
   color: white;
   height: calc(100vh - 85px);
 }
@@ -61,5 +61,13 @@
 
   .projectsContainer h3 {
     font-size: 1.4rem;
+  }
+
+  .projectsContainer {
+    height: calc(100vh - 65px);
+  }
+
+  .projectSectionScroll {
+    top: -65px;
   }
 }

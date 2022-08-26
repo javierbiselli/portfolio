@@ -3,6 +3,7 @@ import Main from "./Main/Main";
 import Projects from "./Projects/Projects";
 import "./index.css";
 import Resume from "./Resume/Resume";
+import Contact from "./Contact/Contact";
 
 const Index = () => {
   return (
@@ -11,6 +12,7 @@ const Index = () => {
       <Main></Main>
       <Projects></Projects>
       <Resume></Resume>
+      <Contact></Contact>
     </div>
   );
 };

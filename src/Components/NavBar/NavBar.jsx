@@ -12,13 +12,13 @@ const NavBar = ({ navBar }) => {
         <div className="navBarMenuContainer">
           <ul className="buttonMenuContainer">
             <li>
-              <a href="#ProjectSectionScroll">- My projects</a>
+              <a href="#ProjectSection">- My projects</a>
             </li>
             <li>
               <a href="#ResumeSection">- Resume</a>
             </li>
             <li>
-              <a href="#ProjectsSection">- Contact</a>
+              <a href="#ContactSection">- Contact</a>
             </li>
             <div className="languageMenuContainer">
               <select
@@ -37,13 +37,13 @@ const NavBar = ({ navBar }) => {
         <div className="navBarContainer">
           <ul className="buttonContainer">
             <li>
-              <a href="#ProjectSectionScroll">MY PROJECTS</a>
+              <a href="#ProjectSection">MY PROJECTS</a>
             </li>
             <li>
               <a href="#ResumeSection">RESUME</a>
             </li>
             <li>
-              <a href="#ProjectsSection">CONTACT</a>
+              <a href="#ContactSection">CONTACT</a>
             </li>
             <div className="languageContainer">
               <select

@@ -9,6 +9,7 @@ import mysql from "../../Assets/mysql.png";
 const Resume = () => {
   return (
     <div className={styles.wholeResumeContainer}>
+      <div id="ResumeSection" className={styles.resumeSectionScroll}></div>
       <section className={styles.resumeContainer} id="ResumeSection">
         <h4>Tecnologies I use</h4>
         <div className={styles.resumeListContainer}>
@@ -53,7 +54,6 @@ const Resume = () => {
               <li>- React hook form</li>
               <li>- Redux thunk</li>
               <li>- Git and GitHub for branching and version control</li>
-              <br />
             </ul>
           </div>
         </div>
