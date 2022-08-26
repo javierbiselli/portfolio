@@ -10,7 +10,7 @@ const Main = () => {
           <br />
           <br />
           If you have any ideas for a project or want to work with me, please{" "}
-          <button>contact me</button>
+          <a href="#ContactSection">contact me</a>
         </p>
       </section>
     </div>

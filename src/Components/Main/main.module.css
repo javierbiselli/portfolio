@@ -20,17 +20,13 @@
   font-size: 2.4rem;
 }
 
-.mainContainer section p button {
-  border: none;
-  background: transparent;
-  color: white;
-  padding: 0;
+.mainContainer section p a {
   font-size: 2.4rem;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.mainContainer section p button:hover {
+.mainContainer section p a:hover {
   color: rgb(175, 102, 243);
 }
 
