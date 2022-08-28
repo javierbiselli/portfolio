@@ -30,7 +30,11 @@ const Projects = () => {
           <h4>Coming soon...</h4>
         </div>
       </section>
-      <Modal isOpen={showModal} handleClose={() => setShowModal(false)}>
+      <Modal
+        isOpen={showModal}
+        handleClose={() => setShowModal(false)}
+        closeClick={() => setShowModal(false)}
+      >
         <ProjectDetails selectedProject={selectedProject} />
       </Modal>
     </div>

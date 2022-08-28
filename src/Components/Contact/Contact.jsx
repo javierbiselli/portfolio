@@ -21,9 +21,25 @@ const Contact = () => {
             <label htmlFor="textarea">Message</label>
             <textarea name="textarea" id="textarea"></textarea>
           </div>
+          <input type="submit" name="" id="" />
         </div>
       </form>
-      <div></div>
+      <div className={styles.socialContainer}>
+        <a
+          href="https://github.com/javierbiselli"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-github"></i>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/javier-biselli-2b8228236/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <i className="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
     </section>
   );
 };

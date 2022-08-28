@@ -52,7 +52,8 @@
 
 .navBarMenuContainer {
   position: absolute;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
   right: 0;
   top: 86px;
   width: 40%;
@@ -65,7 +66,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 60px;
 }
 
 .navBarMenuContainer ul li {
@@ -107,6 +108,11 @@
   border: none;
 }
 
+.navBarMenuContainer .menuButton {
+  align-self: flex-end;
+  padding: 13px 27px;
+}
+
 @media only screen and (max-width: 768px) {
   .buttonContainer {
     position: absolute;
@@ -125,6 +131,6 @@
   }
 
   .navBarMenuContainer {
-    top: 65px;
+    top: 0;
   }
 }

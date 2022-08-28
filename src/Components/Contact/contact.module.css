@@ -3,15 +3,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(14, 1, 22);
+  flex-direction: column;
 }
 
 section form {
   width: 75%;
   max-width: 600px;
   height: auto;
-  padding: 70px 10px;
-  background-color: #222222;
+  margin: 70px 10px;
   display: flex;
   border-radius: 5px;
 }
@@ -19,6 +18,7 @@ section form {
 section form h4 {
   color: white;
   margin-top: 0;
+  margin-bottom: 15px;
   font-size: 1.5rem;
 }
 
@@ -35,11 +35,14 @@ section form label {
 
 .textArea textarea {
   height: 15vh;
-  background-color: #2d2d2d;
+  background-color: #c2c2c2;
   border: none;
+  border-radius: 3px;
   margin: 10px 0;
   resize: none;
-  color: white;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
 }
 
 .formContainer {
@@ -61,13 +64,15 @@ section form label {
 }
 
 .inputContainer input {
-  background-color: #2d2d2d;
+  background-color: #c2c2c2;
   border: none;
+  border-radius: 3px;
   margin: 10px 0;
-  color: white;
-  height: 30px;
-  font-size: 1.1rem;
-  width: 100%;
+  height: 20px;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  padding: 5px;
 }
 
 .contactSectionScroll {
@@ -80,6 +85,25 @@ section form label {
   width: 99%;
   display: flex;
   flex-direction: column;
+}
+
+.socialContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.socialContainer i {
+  color: white;
+  font-size: 1.6rem;
+  margin: 0 10px;
+}
+
+.socialContainer p {
+  margin: 0 0;
+  margin-right: 15px;
 }
 
 @media only screen and (max-width: 768px) {

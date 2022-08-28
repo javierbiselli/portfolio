@@ -1,8 +1,6 @@
 import styles from "./projectDetails.module.css";
 
 const ProjectDetails = (selectedProject) => {
-  console.log(selectedProject);
-
   const renderSwitch = (projectId) => {
     switch (selectedProject.selectedProject) {
       case "Divirta":

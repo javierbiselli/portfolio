@@ -1,6 +1,6 @@
 import "./navBar.css";
 
-const NavBar = ({ navBar }) => {
+const NavBar = ({ navBar, setNavBar }) => {
   const changeLanguage = (option) => {
     localStorage.setItem("lang", option.target.value);
     window.location.reload();
@@ -10,13 +10,16 @@ const NavBar = ({ navBar }) => {
     <>
       {navBar ? (
         <div className="navBarMenuContainer">
+          <button className="menuButton" onClick={() => setNavBar(!navBar)}>
+            <i className="fa-solid fa-bars"></i>
+          </button>
           <ul className="buttonMenuContainer">
             <li>
               <a href="#ProjectSection">- My projects</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#ResumeSection">- Resume</a>
-            </li>
+            </li> */}
             <li>
               <a href="#ContactSection">- Contact</a>
             </li>
@@ -39,9 +42,9 @@ const NavBar = ({ navBar }) => {
             <li>
               <a href="#ProjectSection">MY PROJECTS</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#ResumeSection">RESUME</a>
-            </li>
+            </li> */}
             <li>
               <a href="#ContactSection">CONTACT</a>
             </li>

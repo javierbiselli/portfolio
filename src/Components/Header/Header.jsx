@@ -24,8 +24,11 @@ const Header = () => {
             <a href="#home">JAVIER BISELLI</a>
           </h1>
         </div>
-        <NavBar navBar={navBar} />
-        <button className="menuButton" onClick={() => setNavBar(!navBar)}>
+        <NavBar navBar={navBar} setNavBar={setNavBar} />
+        <button
+          className={navBar ? "inactiveButton" : "menuButton"}
+          onClick={() => setNavBar(!navBar)}
+        >
           <i className="fa-solid fa-bars"></i>
         </button>
       </header>
