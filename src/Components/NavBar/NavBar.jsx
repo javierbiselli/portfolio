@@ -1,4 +1,5 @@
 import "./navBar.css";
+import { motion } from "framer-motion";
 
 const NavBar = ({ navBar, setNavBar }) => {
   const changeLanguage = (option) => {
@@ -9,7 +10,24 @@ const NavBar = ({ navBar, setNavBar }) => {
   return (
     <>
       {navBar ? (
-        <div className="navBarMenuContainer">
+        <motion.div
+          className="navBarMenuContainer"
+          initial={{
+            x: 800,
+          }}
+          animate={{
+            x: 0,
+            transition: {
+              duration: 0.3,
+            },
+          }}
+          exit={{
+            x: 800,
+            transition: {
+              duration: 0.3,
+            },
+          }}
+        >
           <button className="menuButton" onClick={() => setNavBar(!navBar)}>
             <i className="fa-solid fa-bars"></i>
           </button>
@@ -35,7 +53,7 @@ const NavBar = ({ navBar, setNavBar }) => {
               </select>
             </div>
           </ul>
-        </div>
+        </motion.div>
       ) : (
         <div className="navBarContainer">
           <ul className="buttonContainer">
