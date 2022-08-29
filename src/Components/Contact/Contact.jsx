@@ -1,8 +1,15 @@
 import styles from "./contact.module.css";
 import emailjs from "emailjs-com";
 import Joi from "joi";
+import { joiResolver } from "@hookform/resolvers/joi";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import Loader from "../Loader/Loader";
+import Modal from "../Modal/Modal";
 
 const Contact = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   const schema = Joi.object({
     name: Joi.string()
       .min(3)
@@ -25,57 +32,60 @@ const Contact = () => {
     message: Joi.string().required(),
   });
 
-  const isValid = async (e) => {
-    return isValid;
-  };
+  const {
+    handleSubmit,
+    register,
+    formState: { errors },
+  } = useForm({
+    mode: "onChange",
+    resolver: joiResolver(schema),
+  });
 
-  const sendEmail = async (e) => {
-    e.preventDefault();
-    let formData = {
-      name: e.target[0].value,
-      email: e.target[1].value,
-      message: e.target[2].value,
-    };
-    console.log(formData);
-    const isValid = await schema.validate(formData);
-    if (isValid.error) {
-      alert(isValid.error.details[0].message);
-    } else {
-      emailjs
-        .sendForm(
-          "service_g2le82c",
-          "template_ygrdrbb",
-          e.target,
-          "V61t4y1LnMzqdr-T4"
-        )
-        .then((res) => {
-          res.status === 200 ? alert("Message send") : alert(res.text);
-        })
-        .catch((err) => console.log(err));
-    }
+  const sendEmail = async (data) => {
+    setIsLoading(true);
+    emailjs
+      .send("service_g2le82c", "template_ygrdrbb", data, "V61t4y1LnMzqdr-T4")
+      .then((res) => {
+        if (res.status === 200) {
+          setIsLoading(false);
+          setShowModal(true);
+        } else {
+          alert(res.text);
+        }
+      })
+      .catch((err) => console.log(err));
   };
   return (
     <section className={styles.contactContainer} id="Contact">
       <div id="ContactSection" className={styles.contactSectionScroll}></div>
-      <form onSubmit={sendEmail}>
+      <form onSubmit={handleSubmit(sendEmail)}>
         <div className={styles.formContainer}>
           <h4>Contact me</h4>
           <div className={styles.inputContainer}>
             <div className={styles.singleInputContainer}>
               <label htmlFor="name">Name</label>
-              <input type="text" name="name" />
-              {isValid() ? <div className={styles.error}>{}</div> : ""}
+              <input type="text" name="name" {...register("name")} />
+              <div className={styles.error}>{errors.name?.message}</div>
             </div>
             <div className={styles.singleInputContainer}>
               <label htmlFor="email">Email</label>
-              <input type="email" name="email" />
+              <input type="email" name="email" {...register("email")} />
+              <div className={styles.error}>{errors.email?.message}</div>
             </div>
           </div>
           <div className={styles.textArea}>
             <label htmlFor="message">Message</label>
-            <textarea name="message" id="message"></textarea>
+            <textarea
+              name="message"
+              id="message"
+              {...register("message")}
+            ></textarea>
+            <div className={styles.error}>{errors.message?.message}</div>
           </div>
-          <input type="submit" value="Send" className={styles.submitButton} />
+          <div className={styles.loadingContainer}>
+            <Loader show={isLoading} />
+            <input type="submit" value="Send" className={styles.submitButton} />
+          </div>
         </div>
       </form>
       <div className={styles.socialContainer}>
@@ -94,6 +104,12 @@ const Contact = () => {
           <i className="fa-brands fa-linkedin"></i>
         </a>
       </div>
+      <Modal isOpen={showModal} handleClose={() => setShowModal(false)}>
+        Message send!
+        <br />
+        <br />
+        <br />
+      </Modal>
     </section>
   );
 };
