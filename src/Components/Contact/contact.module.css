@@ -96,14 +96,44 @@ section form label {
 }
 
 .socialContainer i {
-  color: white;
+  color: #c2c2c2;
   font-size: 1.6rem;
   margin: 0 10px;
+}
+
+.socialContainer i:hover {
+  color: white;
 }
 
 .socialContainer p {
   margin: 0 0;
   margin-right: 15px;
+}
+
+.submitButton {
+  align-self: flex-end;
+  background-color: transparent;
+  color: #c2c2c2;
+  padding: 4px 15px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.submitButton:hover {
+  color: white;
+  border: 1px solid white;
+}
+
+.errorRed {
+  padding: 5px;
+  border: #ff0000 solid 2px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 6px #00000090;
+}
+
+.error {
+  font-size: 12px;
+  color: #ff0000;
 }
 
 @media only screen and (max-width: 768px) {
