@@ -32,11 +32,11 @@ const NavBar = ({ navBar, setNavBar }) => {
           >
             <ul className="buttonMenuContainer">
               <li>
-                <a href="#ProjectSection">- My projects</a>
+                <a href="#ProjectSection">- Projects</a>
               </li>
-              {/* <li>
-              <a href="#ResumeSection">- Resume</a>
-            </li> */}
+              <li>
+                <a href="#ResumeSection">- Skills</a>
+              </li>
               <li>
                 <a href="#ContactSection">- Contact</a>
               </li>

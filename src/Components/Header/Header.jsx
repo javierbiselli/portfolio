@@ -30,11 +30,11 @@ const Header = () => {
             <div className="navBarContainer">
               <ul className="buttonContainer">
                 <li>
-                  <a href="#ProjectSection">MY PROJECTS</a>
+                  <a href="#ProjectSection">PROJECTS</a>
                 </li>
-                {/* <li>
-								<a href="#ResumeSection">RESUME</a>
-							</li> */}
+                <li>
+                  <a href="#ResumeSection">SKILLS</a>
+                </li>
                 <li>
                   <a href="#ContactSection">CONTACT</a>
                 </li>

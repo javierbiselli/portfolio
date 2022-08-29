@@ -1,7 +1,5 @@
 .resumeContainer {
   height: calc(100vh - 85px);
-  display: flex;
-  flex-direction: column;
   color: white;
 }
 
@@ -12,6 +10,17 @@
   scroll-snap-align: start;
 }
 
+.sectionContainer {
+  width: 90%;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.greatText {
+  width: 50%;
+}
 @media only screen and (max-width: 768px) {
   .resumeContainer {
     height: calc(100vh - 65px);
@@ -19,5 +28,13 @@
 
   .resumeSectionScroll {
     top: -65px;
+  }
+
+  .greatText {
+    width: 100%;
+  }
+  .sectionContainer {
+    flex-direction: column;
+    font-size: 0.8rem;
   }
 }

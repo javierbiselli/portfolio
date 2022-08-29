@@ -17,6 +17,7 @@ const Contact = () => {
       .regex(/^[a-zA-Z_ ]*$/)
       .messages({
         "string.pattern.base": "Name must contain only letters",
+        "string.empty": "This field is required",
       })
       .required(),
     email: Joi.string()
@@ -29,7 +30,9 @@ const Contact = () => {
         "string.empty": "This field is required",
       })
       .required(),
-    message: Joi.string().required(),
+    message: Joi.string().required().messages({
+      "string.empty": "Write your message",
+    }),
   });
 
   const {
