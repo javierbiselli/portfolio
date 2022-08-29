@@ -1,69 +1,86 @@
 import React from "react";
 import styles from "./modal.module.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Modal = ({ children, isOpen, handleClose }) => {
-  if (!isOpen) {
-    return null;
-  }
-
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-        transition: {
-          duration: 0.3,
-        },
-      }}
-      className={styles.shade}
-    >
-      <motion.div
-        initial={{
-          y: 800,
-        }}
-        animate={{
-          y: 0,
-          transition: {
-            duration: 0.3,
-          },
-        }}
-        className={styles.billboard}
-      >
-        <motion.button
-          initial={{
-            x: 800,
-          }}
-          animate={{
-            x: 0,
-            transition: {
-              duration: 0.3,
-            },
-          }}
-          onClick={handleClose}
-          className={styles.btnX}
-        >
-          X
-        </motion.button>
+    <AnimatePresence>
+      {isOpen && (
         <motion.div
           initial={{
-            x: 800,
+            opacity: 0,
           }}
           animate={{
-            x: 0,
+            opacity: 1,
+          }}
+          exit={{
+            opacity: 0,
             transition: {
-              duration: 0.4,
-              delay: 0.1,
+              duration: 0.2,
+              delay: 0.2,
             },
           }}
-          className={styles.content}
+          className={styles.shade}
         >
-          {children}
+          <motion.div
+            initial={{
+              y: 800,
+            }}
+            animate={{
+              y: 0,
+              transition: {
+                duration: 0.3,
+              },
+            }}
+            exit={{
+              y: 800,
+              transition: {
+                duration: 0.3,
+                delay: 0.2,
+              },
+            }}
+            className={styles.billboard}
+          >
+            <motion.button
+              initial={{
+                x: 800,
+              }}
+              animate={{
+                x: 0,
+                transition: {
+                  duration: 0.3,
+                },
+              }}
+              onClick={handleClose}
+              className={styles.btnX}
+            >
+              X
+            </motion.button>
+            <motion.div
+              initial={{
+                x: 800,
+              }}
+              animate={{
+                x: 0,
+                transition: {
+                  duration: 0.3,
+                  delay: 0.1,
+                },
+              }}
+              exit={{
+                x: 800,
+                transition: {
+                  duration: 0.2,
+                },
+              }}
+              className={styles.content}
+            >
+              {children}
+            </motion.div>
+          </motion.div>
         </motion.div>
-      </motion.div>
-    </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 

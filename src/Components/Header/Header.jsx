@@ -25,10 +25,32 @@ const Header = () => {
           </h1>
         </div>
         <NavBar navBar={navBar} setNavBar={setNavBar} />
-        <button
-          className={navBar ? "inactiveButton" : "menuButton"}
-          onClick={() => setNavBar(!navBar)}
-        >
+        <>
+          {!navBar ? (
+            <div className="navBarContainer">
+              <ul className="buttonContainer">
+                <li>
+                  <a href="#ProjectSection">MY PROJECTS</a>
+                </li>
+                {/* <li>
+								<a href="#ResumeSection">RESUME</a>
+							</li> */}
+                <li>
+                  <a href="#ContactSection">CONTACT</a>
+                </li>
+                <div className="languageContainer">
+                  <select name="language" id="language">
+                    <option value="english">English</option>
+                    <option value="espanol">Español</option>
+                  </select>
+                </div>
+              </ul>
+            </div>
+          ) : (
+            ""
+          )}
+        </>
+        <button className="menuButton" onClick={() => setNavBar(!navBar)}>
           <i className="fa-solid fa-bars"></i>
         </button>
       </header>

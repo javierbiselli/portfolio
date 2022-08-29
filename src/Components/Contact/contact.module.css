@@ -1,9 +1,9 @@
 .contactContainer {
   height: calc(100vh - 85px);
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  position: relative;
 }
 
 section form {
@@ -176,5 +176,6 @@ section form label {
 
   .contactContainer {
     flex-direction: row;
+    min-height: 100vh;
   }
 }

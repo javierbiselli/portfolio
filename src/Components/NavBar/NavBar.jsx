@@ -1,5 +1,5 @@
 import "./navBar.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = ({ navBar, setNavBar }) => {
   const changeLanguage = (option) => {
@@ -9,77 +9,52 @@ const NavBar = ({ navBar, setNavBar }) => {
   const lang = localStorage.getItem("lang") || "en";
   return (
     <>
-      {navBar ? (
-        <motion.div
-          className="navBarMenuContainer"
-          initial={{
-            x: 800,
-          }}
-          animate={{
-            x: 0,
-            transition: {
-              duration: 0.3,
-            },
-          }}
-          exit={{
-            x: 800,
-            transition: {
-              duration: 0.3,
-            },
-          }}
-        >
-          <button className="menuButton" onClick={() => setNavBar(!navBar)}>
-            <i className="fa-solid fa-bars"></i>
-          </button>
-          <ul className="buttonMenuContainer">
-            <li>
-              <a href="#ProjectSection">- My projects</a>
-            </li>
-            {/* <li>
+      <AnimatePresence>
+        {navBar && (
+          <motion.div
+            className="navBarMenuContainer"
+            key="navBarMenuContainer"
+            initial={{
+              x: 800,
+            }}
+            animate={{
+              x: 0,
+              transition: {
+                duration: 0.3,
+              },
+            }}
+            exit={{
+              x: 800,
+              transition: {
+                duration: 0.3,
+              },
+            }}
+          >
+            <ul className="buttonMenuContainer">
+              <li>
+                <a href="#ProjectSection">- My projects</a>
+              </li>
+              {/* <li>
               <a href="#ResumeSection">- Resume</a>
             </li> */}
-            <li>
-              <a href="#ContactSection">- Contact</a>
-            </li>
-            <div className="languageMenuContainer">
-              <select
-                name="language"
-                id="language"
-                onChange={changeLanguage}
-                value={lang}
-              >
-                <option value="en">English</option>
-                <option value="es">Español</option>
-              </select>
-            </div>
-          </ul>
-        </motion.div>
-      ) : (
-        <div className="navBarContainer">
-          <ul className="buttonContainer">
-            <li>
-              <a href="#ProjectSection">MY PROJECTS</a>
-            </li>
-            {/* <li>
-              <a href="#ResumeSection">RESUME</a>
-            </li> */}
-            <li>
-              <a href="#ContactSection">CONTACT</a>
-            </li>
-            <div className="languageContainer">
-              <select
-                name="language"
-                id="language"
-                onChange={changeLanguage}
-                value={lang}
-              >
-                <option value="english">English</option>
-                <option value="espanol">Español</option>
-              </select>
-            </div>
-          </ul>
-        </div>
-      )}
+              <li>
+                <a href="#ContactSection">- Contact</a>
+              </li>
+              <div className="languageMenuContainer">
+                <select
+                  name="language"
+                  id="language"
+                  onChange={changeLanguage}
+                  value={lang}
+                >
+                  <option value="en">English</option>
+                  <option value="es">Español</option>
+                </select>
+              </div>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };
