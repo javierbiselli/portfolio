@@ -9,6 +9,7 @@
   width: 1px;
   position: relative;
   top: -85px;
+  scroll-snap-align: start;
 }
 
 @media only screen and (max-width: 768px) {

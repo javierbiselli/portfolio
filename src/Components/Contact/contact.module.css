@@ -116,7 +116,7 @@ section form label {
   }
 }
 
-@media only screen and (max-height: 460px) {
+@media only screen and (max-height: 600px) {
   .inputContainer {
     width: 100%;
     flex-direction: row;
@@ -129,8 +129,6 @@ section form label {
 
   section form {
     padding: 20px 10px;
-    background-color: #222222;
-    display: flex;
     border-radius: 5px;
   }
 
@@ -144,5 +142,9 @@ section form label {
 
   .inputContainer input {
     width: 98%;
+  }
+
+  .contactContainer {
+    flex-direction: row;
   }
 }

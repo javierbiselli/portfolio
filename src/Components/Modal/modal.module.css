@@ -8,13 +8,15 @@
   width: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
   background-color: #00000080;
   z-index: 50;
 }
 
 .billboard {
-  overflow: hidden;
+  overflow: auto;
+  overflow-x: hidden;
   display: flex;
   flex-direction: column;
   text-align: center;
