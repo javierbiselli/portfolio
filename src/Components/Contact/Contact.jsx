@@ -111,7 +111,6 @@ const Contact = () => {
         Message send!
         <br />
         <br />
-        <br />
       </Modal>
     </section>
   );

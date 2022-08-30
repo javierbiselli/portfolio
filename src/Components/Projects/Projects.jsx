@@ -14,8 +14,8 @@ const Projects = () => {
 
   return (
     <div className={styles.projectsContainer}>
-      <div id="ProjectSection" className={styles.projectSectionScroll}></div>
-      <h3>My projects</h3>
+      <div id="Projects" className={styles.projectSectionScroll}></div>
+      <h3>Learn about my projects</h3>
       <section>
         <div id="Divirta" className={styles.project} onClick={onClick}>
           <h4>Divirta</h4>

@@ -24,26 +24,23 @@ const Header = () => {
             <a href="#home">JAVIER BISELLI</a>
           </h1>
         </div>
-        <NavBar navBar={navBar} setNavBar={setNavBar} />
+        <NavBar navBar={navBar} />
         <>
           {!navBar ? (
             <div className="navBarContainer">
               <ul className="buttonContainer">
                 <li>
-                  <a href="#ProjectSection">PROJECTS</a>
+                  <a href="#About">ABOUT</a>
                 </li>
                 <li>
-                  <a href="#ResumeSection">SKILLS</a>
+                  <a href="#Skills">SKILLS</a>
                 </li>
                 <li>
-                  <a href="#ContactSection">CONTACT</a>
+                  <a href="#Projects">PROJECTS</a>
                 </li>
-                <div className="languageContainer">
-                  <select name="language" id="language">
-                    <option value="english">English</option>
-                    <option value="espanol">Español</option>
-                  </select>
-                </div>
+                <li>
+                  <a href="#Contact">CONTACT</a>
+                </li>
               </ul>
             </div>
           ) : (

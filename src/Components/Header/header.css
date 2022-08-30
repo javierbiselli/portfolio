@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90%;
+  width: 80%;
   height: 66.7px;
   margin: auto;
 }
@@ -54,8 +54,6 @@ h1 {
 
   h1 {
     font-size: 1rem;
-    position: relative;
-    left: 5px;
   }
 
   .menuButton {

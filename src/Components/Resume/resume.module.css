@@ -1,6 +1,9 @@
 .resumeContainer {
   height: calc(100vh - 85px);
   color: white;
+  background-image: url(../../Assets/background2.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .resumeSectionScroll {
@@ -11,16 +14,50 @@
 }
 
 .sectionContainer {
-  width: 90%;
-  margin: auto;
-  padding-top: 20px;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.lists {
+  padding: 0 30px;
+  height: calc(100vh - 85px);
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
 .greatText {
-  width: 50%;
+  width: 45%;
+  height: calc(100vh - 85px);
+  margin: 0;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2rem;
+  background-color: #10121a;
+  justify-content: center;
+  color: #bdbdbd;
 }
+
+.greatText p {
+  padding: 0 300px 0 70px;
+}
+.aboutMe {
+  color: #911a8b;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.learning {
+  font-weight: bold;
+  color: white;
+}
+
 @media only screen and (max-width: 768px) {
   .resumeContainer {
     height: calc(100vh - 65px);
@@ -31,10 +68,19 @@
   }
 
   .greatText {
-    width: 100%;
+    width: auto;
+    height: calc(100vh - 65px);
+    font-size: 1rem;
+  }
+
+  .greatText p {
+    padding: 0 30px;
   }
   .sectionContainer {
     flex-direction: column;
-    font-size: 0.8rem;
+  }
+
+  .lists {
+    display: none;
   }
 }

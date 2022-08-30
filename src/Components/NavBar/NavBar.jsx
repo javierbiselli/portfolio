@@ -1,12 +1,7 @@
 import "./navBar.css";
 import { motion, AnimatePresence } from "framer-motion";
 
-const NavBar = ({ navBar, setNavBar }) => {
-  const changeLanguage = (option) => {
-    localStorage.setItem("lang", option.target.value);
-    window.location.reload();
-  };
-  const lang = localStorage.getItem("lang") || "en";
+const NavBar = ({ navBar }) => {
   return (
     <>
       <AnimatePresence>
@@ -32,25 +27,17 @@ const NavBar = ({ navBar, setNavBar }) => {
           >
             <ul className="buttonMenuContainer">
               <li>
-                <a href="#ProjectSection">- Projects</a>
+                <a href="#About">- About</a>
               </li>
               <li>
-                <a href="#ResumeSection">- Skills</a>
+                <a href="#Skills">- Skills</a>
               </li>
               <li>
-                <a href="#ContactSection">- Contact</a>
+                <a href="#Projects">- Projects</a>
               </li>
-              <div className="languageMenuContainer">
-                <select
-                  name="language"
-                  id="language"
-                  onChange={changeLanguage}
-                  value={lang}
-                >
-                  <option value="en">English</option>
-                  <option value="es">Español</option>
-                </select>
-              </div>
+              <li>
+                <a href="#Contact">- Contact</a>
+              </li>
             </ul>
           </motion.div>
         )}
