@@ -191,6 +191,8 @@ section form label {
 
   .contactContainer {
     flex-direction: row;
+    height: 100%;
     min-height: 100vh;
+    align-items: stretch;
   }
 }
