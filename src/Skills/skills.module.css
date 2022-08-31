@@ -1,4 +1,71 @@
 .skillsContainer {
   height: calc(100vh - 85px);
   color: white;
+  background-image: url(../Assets/fondo2.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  display: flex;
+}
+
+.listTec {
+  width: 45%;
+  background-color: #10121a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #10121a;
+}
+
+.listTec p {
+  color: #911a8b;
+  font-weight: bold;
+  font-size: 1.5rem;
+  width: 70%;
+}
+
+.listTec ul {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  width: 70%;
+  color: #bdbdbd;
+}
+
+.listTec div {
+  width: 70%;
+  font-size: 1.2rem;
+}
+
+.ul {
+  display: flex;
+  font-size: 1.3rem;
+}
+
+.skillsSectionScroll {
+  width: 1px;
+  position: relative;
+  top: -85px;
+  scroll-snap-align: start;
+}
+
+@media only screen and (max-width: 768px) {
+  .skillsSectionScroll {
+    top: -65px;
+  }
+
+  .skillsContainer {
+    height: calc(100vh - 65px);
+    background-image: none;
+  }
+  .listTec {
+    width: 100vw;
+    position: relative;
+    right: 1px;
+  }
+
+  .listTec div {
+    width: 70%;
+    font-size: 1rem;
+  }
 }

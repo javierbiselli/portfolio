@@ -99,10 +99,12 @@ section form label {
   color: #c2c2c2;
   font-size: 1.6rem;
   margin: 0 10px;
+  transition: 0.3s;
 }
 
 .socialContainer i:hover {
   color: white;
+  scale: 1.1;
 }
 
 .socialContainer p {
@@ -192,7 +194,6 @@ section form label {
   .contactContainer {
     flex-direction: row;
     height: 100%;
-    min-height: 100vh;
     align-items: stretch;
   }
 }

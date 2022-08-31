@@ -26,9 +26,6 @@ const Projects = () => {
         <div id="Coming soon..." className={styles.project} onClick={onClick}>
           <h4>Coming soon...</h4>
         </div>
-        <div id="Coming soon..." className={styles.project} onClick={onClick}>
-          <h4>Coming soon...</h4>
-        </div>
       </section>
       <Modal
         isOpen={showModal}
