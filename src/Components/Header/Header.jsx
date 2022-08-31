@@ -25,6 +25,28 @@ const Header = () => {
           </h1>
         </div>
         <NavBar navBar={navBar} />
+        <>
+          {!navBar ? (
+            <div className="navBarContainer">
+              <ul className="buttonContainer">
+                <li>
+                  <a href="#About">ABOUT</a>
+                </li>
+                <li>
+                  <a href="#Projects">PROJECTS</a>
+                </li>
+                <li>
+                  <a href="#Skills">SKILLS</a>
+                </li>
+                <li>
+                  <a href="#Contact">CONTACT</a>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            ""
+          )}
+        </>
         <button className="menuButton" onClick={() => setNavBar(!navBar)}>
           <i className="fa-solid fa-bars"></i>
         </button>

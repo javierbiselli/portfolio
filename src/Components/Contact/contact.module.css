@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   position: relative;
+  justify-content: center;
 }
 
 section form {
@@ -163,7 +164,7 @@ section form label {
   }
 }
 
-@media only screen and (max-height: 600px) {
+@media only screen and (max-height: 550px) {
   .inputContainer {
     width: 100%;
     flex-direction: row;
@@ -192,8 +193,10 @@ section form label {
   }
 
   .contactContainer {
-    flex-direction: row;
-    height: 100%;
-    align-items: stretch;
+    height: calc(600vh);
+  }
+
+  .socialContainer i {
+    display: none;
   }
 }
