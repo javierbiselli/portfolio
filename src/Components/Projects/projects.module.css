@@ -1,6 +1,7 @@
 .projectsContainer {
   color: white;
   height: calc(100vh - 85px);
+  position: relative;
 }
 
 .projectsContainer h3 {

@@ -24,6 +24,7 @@ const Projects = () => {
         <section>
           <ProjectsShared id={"Divirta"} onClick={onClick} />
           <ProjectsShared id={"Trackgenix"} onClick={onClick} />
+          <ProjectsShared id={"Coming soon..."} onClick={onClick} />
         </section>
       </div>
       <Modal isOpen={showModal} handleClose={() => setShowModal(false)}>

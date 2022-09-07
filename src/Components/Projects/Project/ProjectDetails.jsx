@@ -67,7 +67,7 @@ const ProjectDetails = (selectedProject) => {
                   href="https://github.com/BaSP-m2022/martina-trackgenix-app"
                   rel="noreferrer"
                 >
-                  =&gt; App code
+                  =&gt; App code (Private repo)
                 </a>
               </li>
               <li>
@@ -76,7 +76,7 @@ const ProjectDetails = (selectedProject) => {
                   href="https://github.com/BaSP-m2022/alexis-trackgenix-server"
                   rel="noreferrer"
                 >
-                  =&gt; Server code
+                  =&gt; Server code (Private repo)
                 </a>
               </li>
               <li>
@@ -85,7 +85,7 @@ const ProjectDetails = (selectedProject) => {
                   href="https://martina-trackgenix-app.vercel.app/home"
                   rel="noreferrer"
                 >
-                  =&gt; App link
+                  =&gt; App link (Private)
                 </a>
               </li>
             </ul>

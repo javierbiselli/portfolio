@@ -1,90 +1,127 @@
 .resumeContainer {
+  width: 90%;
   height: calc(100vh - 85px);
+  margin: 0 auto;
   color: white;
-  background-image: url(../../Assets/background2.avif);
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
+}
+
+.sectionsContainer {
+  height: calc(100% - 50px);
+  margin: 25px 0 25px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 90px 90px 0 0;
+  background-color: rgba(134, 134, 134, 0.05);
 }
 
 .resumeSectionScroll {
   width: 1px;
   position: relative;
-  top: -85px;
+  top: -110px;
   scroll-snap-align: start;
 }
 
-.sectionContainer {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.lists {
-  padding: 0 30px;
-  height: calc(100vh - 85px);
-  width: 40%;
+.resumeContainer section {
+  height: 35%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.2rem;
 }
 
-.greatText {
-  width: 45%;
-  height: calc(100vh - 85px);
+.aboutContent,
+.skillsContent {
   margin: 0;
   padding: 0 30px;
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
-  background-color: #10121a;
+  font-size: clamp(14px, 1.7vw, 20px);
   justify-content: center;
   color: #bdbdbd;
+  text-align: center;
 }
 
-.aboutMe {
+.aboutContent {
+  width: 50%;
+  text-align: center;
+}
+
+.skillsUl {
+  display: flex;
+}
+
+.skillsUl ul {
+  padding: 0;
+  text-align: center;
+  margin: 0 20px 0 20px;
+  width: 33.3%;
+}
+
+.skillsUl ul li {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.aboutContent p:first-child,
+.skillsContent p {
   color: #911a8b;
+  font-weight: 1000;
+  font-size: clamp(14px, 2vw, 26px);
+}
+
+.aboutContent p:nth-child(2),
+.skillsUl li {
   font-weight: bold;
-  font-size: 1.5rem;
-  width: 70%;
+  color: white;
+  margin: 0;
 }
 
 .learning {
+  width: 40%;
+  margin-top: 20px;
+  text-align: center;
+  font-size: clamp(10px, 1.9vw, 22px);
   font-weight: bold;
-  color: white;
-  width: 70%;
-}
-
-.text {
-  width: 70%;
 }
 
 @media only screen and (max-width: 768px) {
   .resumeContainer {
-    height: calc(100vh - 65px);
+    width: 100%;
+    height: calc(100vh - 35px);
   }
 
   .resumeSectionScroll {
-    top: -65px;
+    top: -75px;
   }
 
-  .greatText {
+  .aboutContent,
+  .skillsContent {
     width: auto;
-    height: calc(100vh - 65px);
-    font-size: 1rem;
+    font-size: 0.7rem;
     align-items: center;
   }
-
-  .greatText p {
-    padding: 0 30px;
-  }
-  .sectionContainer {
-    flex-direction: column;
+  .skillsUl {
+    display: block;
   }
 
-  .lists {
+  .skillsUl ul {
+    width: 100%;
+    margin: 0;
+  }
+
+  .skillsUl ul div {
+    margin-bottom: 20px;
+  }
+  .aboutContent p:first-child,
+  .skillsContent p {
+    font-size: 1rem;
+  }
+  .resumeContainer section {
+    height: auto;
+  }
+
+  .learning {
     display: none;
   }
 }

@@ -44,6 +44,10 @@
     height: 25%;
   }
 
+  .project:hover {
+    border: none;
+  }
+
   .project h4 {
     font-size: 1.8rem;
   }
