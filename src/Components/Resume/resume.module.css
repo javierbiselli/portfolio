@@ -125,3 +125,16 @@
     display: none;
   }
 }
+
+@media only screen and (max-height: 768px) {
+  .learning {
+    display: none;
+  }
+  .resumeContainer {
+    width: 100%;
+    min-height: calc(100vh - 35px);
+  }
+  .sectionsContainer {
+    justify-content: space-around;
+  }
+}
