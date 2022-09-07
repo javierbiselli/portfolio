@@ -1,40 +1,35 @@
 import styles from "./projects.module.css";
+import { AnimatePresence } from "framer-motion";
+import ProjectsShared from "./ProjectsSharedComp/ProjectsShared";
 import Modal from "../Modal/Modal";
-import { useState } from "react";
 import ProjectDetails from "./Project/ProjectDetails";
+import { useState } from "react";
 
 const Projects = () => {
-  const [showModal, setShowModal] = useState(false);
   const [selectedProject, setSelectedProject] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const onClick = (event) => {
     setSelectedProject(event.currentTarget.id);
+    console.log(event.currentTarget);
+    console.log(selectedProject);
     setShowModal(true);
   };
 
   return (
-    <div className={styles.projectsContainer}>
-      <div id="Projects" className={styles.projectSectionScroll}></div>
-      <h3>Learn about my projects</h3>
-      <section>
-        <div id="Divirta" className={styles.project} onClick={onClick}>
-          <h4>Divirta</h4>
-        </div>
-        <div id="Trackgenix" className={styles.project} onClick={onClick}>
-          <h4>Trackgenix</h4>
-        </div>
-        <div id="Coming soon..." className={styles.project} onClick={onClick}>
-          <h4>Coming soon...</h4>
-        </div>
-      </section>
-      <Modal
-        isOpen={showModal}
-        handleClose={() => setShowModal(false)}
-        closeClick={() => setShowModal(false)}
-      >
+    <AnimatePresence>
+      <div className={styles.projectsContainer}>
+        <div id="Projects" className={styles.projectSectionScroll}></div>
+        <h3>Learn about my projects</h3>
+        <section>
+          <ProjectsShared id={"Divirta"} onClick={onClick} />
+          <ProjectsShared id={"Trackgenix"} onClick={onClick} />
+        </section>
+      </div>
+      <Modal isOpen={showModal} handleClose={() => setShowModal(false)}>
         <ProjectDetails selectedProject={selectedProject} />
       </Modal>
-    </div>
+    </AnimatePresence>
   );
 };
 

@@ -8,7 +8,9 @@ const Resume = () => {
         <div className={styles.lists}></div>
         <div className={styles.greatText}>
           <p className={styles.aboutMe}>ABOUT</p>
-          <p className={styles.learning}>I am learning new things every day!</p>
+          <p className={styles.learning}>
+            I am learning new tecnologies every day!
+          </p>
           <p className={styles.text}>
             I was first introduced to coding during my administration studies in
             the national university of Rosario back in 2019, where I learned to

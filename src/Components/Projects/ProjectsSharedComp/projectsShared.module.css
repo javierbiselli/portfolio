@@ -1,0 +1,80 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 35%;
+  min-width: 220px;
+  text-align: center;
+  align-self: center;
+  justify-content: center;
+  border: 1px solid white;
+  min-height: 50px;
+  height: 40%;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 10px 0;
+}
+
+.project:hover {
+  filter: blur(0);
+}
+
+.project h4 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.h4Cel {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .project {
+    height: 25%;
+  }
+
+  .project h4 {
+    font-size: 1.8rem;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .h4Desk {
+    display: none;
+  }
+
+  .h4Cel {
+    display: block;
+  }
+}
+
+@media only screen and (max-height: 600px) {
+  .project h4 {
+    font-size: 1.4rem;
+  }
+
+  .slider {
+    display: none;
+  }
+
+  .h4Desk {
+    display: none;
+  }
+
+  .h4Cel {
+    display: block;
+  }
+}

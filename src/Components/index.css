@@ -1,8 +1,8 @@
 .app {
   width: 100%;
   margin: auto;
-  background: linear-gradient(180deg, #090314, #37063b, #2a052e, #020003);
   background-repeat: no-repeat;
+  background: linear-gradient(180deg, #d8d8d8, #160218, #2a052e, #020202);
 }
 
 a {
