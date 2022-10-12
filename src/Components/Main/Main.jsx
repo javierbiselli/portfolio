@@ -75,7 +75,7 @@ const Main = () => {
         className={styles.getCv}
       >
         <a
-          href="https://drive.google.com/file/d/1tf5Yj5bpciYRCqt_kkslwldRpawsqf-l/view"
+          href="https://drive.google.com/file/d/1mErCMqyNEKNGIWVrAbhSQFgYnSTwRtGK/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >
