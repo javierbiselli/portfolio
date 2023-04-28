@@ -1,0 +1,160 @@
+.skills {
+  min-height: 100vh;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.skills h2 {
+  font-size: 2.6rem;
+  margin-bottom: 1rem;
+  color: #911a8b;
+  font-weight: 1000;
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+
+.icons h3 {
+  color: white;
+}
+
+.categoryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(134, 134, 134, 0.05);
+  border-radius: 50px;
+  margin-top: 5px;
+}
+
+.category {
+  display: flex;
+}
+
+.icon {
+  margin: 0 1.5rem 1.5rem 0;
+  font-size: 6rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tooltip {
+  font-size: 1.5rem;
+  color: #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}
+
+.icon:hover .tooltip {
+  opacity: 1;
+  scale: 1.2;
+  visibility: visible;
+}
+
+.icon:hover {
+  transition: 0.2s;
+}
+
+.frontEnd .icon:nth-child(1):hover {
+  color: #e54d26;
+}
+
+.frontEnd .icon:nth-child(2):hover {
+  color: #2965f1;
+}
+
+.frontEnd .icon:nth-child(3):hover {
+  color: #f0db4f;
+}
+
+.frontEnd .icon:nth-child(4):hover {
+  color: #61dbfb;
+}
+
+.frontEnd .icon:nth-child(5):hover {
+  color: #dd1b16;
+}
+
+.backEnd .icon:nth-child(1):hover {
+  color: #3c873a;
+}
+
+.backEnd .icon:nth-child(2):hover {
+  color: #00758f;
+}
+
+.backEnd .icon:nth-child(3):hover {
+  color: #4db33d;
+}
+
+.backEnd .icon:nth-child(4):hover {
+  color: #ffcb2b;
+}
+
+.mobile .icon:nth-child(1):hover {
+  color: #61dbfb;
+}
+
+.mobile .icon:nth-child(2):hover {
+  color: #8f7ee5;
+}
+
+.skillSectionScroll {
+  width: 1px;
+  position: relative;
+  top: -140px;
+  scroll-snap-align: start;
+}
+
+@media only screen and (max-width: 768px) {
+  .skills h2 {
+    font-size: 1.6rem;
+  }
+  .icons {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .icons h3 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+
+  .icon {
+    font-size: 3.5rem;
+    margin: 0;
+  }
+
+  .categoryContainer {
+    border-radius: 0;
+  }
+
+  .category {
+    flex-direction: column;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+
+  .tooltip {
+    font-size: 1rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .skillSectionScroll {
+    top: -70px;
+  }
+}

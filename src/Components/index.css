@@ -2,7 +2,7 @@
   width: 100%;
   margin: auto;
   background-repeat: no-repeat;
-  background: linear-gradient(180deg, #d8d8d8, #160218, #2a052e, #020202);
+  background: rgb(10, 10, 10);
 }
 
 a {
@@ -24,4 +24,36 @@ ul {
   max-height: 150%;
   object-fit: cover;
   z-index: 0;
+}
+
+.loaderContainer {
+  display: flex;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+  background: rgb(10, 10, 10);
+}
+
+.loader {
+  --dim: 6rem;
+  width: var(--dim);
+  height: var(--dim);
+  border: 7px solid #2596be;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: spin_51 1.5s infinite linear;
+}
+
+@keyframes spin_51 {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

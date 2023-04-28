@@ -11,8 +11,6 @@ const Projects = () => {
 
   const onClick = (event) => {
     setSelectedProject(event.currentTarget.id);
-    console.log(event.currentTarget);
-    console.log(selectedProject);
     setShowModal(true);
   };
 

@@ -1,9 +1,52 @@
+import { useEffect, useState } from "react";
 import styles from "./main.module.css";
 import { motion } from "framer-motion";
 
 const Main = () => {
+  const [height, setHeight] = useState(null);
+  const [scrollTop, setScrollTop] = useState(true);
+
+  useEffect(() => {
+    function updateHeight() {
+      if (scrollTop) {
+        const windowHeight = window.innerHeight;
+        const windowTotalHeight = window.outerHeight;
+        const navigationBarHeight = windowTotalHeight - windowHeight;
+        const contentHeight = windowHeight - navigationBarHeight;
+        setHeight(contentHeight);
+      }
+    }
+
+    updateHeight();
+
+    window.addEventListener("resize", updateHeight);
+
+    function handleScroll() {
+      if (window.scrollY === 0) {
+        setScrollTop(true);
+      } else {
+        setScrollTop(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollTop]);
+
   return (
-    <div className={styles.mainContainer} id="home">
+    <div
+      className={styles.mainContainer}
+      id="home"
+      style={
+        window.innerWidth < 768
+          ? { height: `${height}px` }
+          : { height: "100vh" }
+      }
+    >
       <section>
         <motion.p
           initial={{

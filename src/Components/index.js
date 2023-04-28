@@ -6,11 +6,25 @@ import Resume from "./Resume/Resume";
 import Projects from "./Projects/Projects";
 import Contact from "./Contact/Contact";
 import backgroundvid from "../Assets/backgroundvid.mp4";
+import { useState } from "react";
+import Skills from "./Skills/Skills";
 
 const Index = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false);
+
+  const handleVideoLoaded = () => {
+    setVideoLoaded(true);
+  };
   return (
     <div className="app">
+      {!videoLoaded && (
+        <div className="loaderContainer">
+          <div className="loader"></div>
+        </div>
+      )}
+
       <motion.video
+        onLoadedData={handleVideoLoaded}
         initial={{
           opacity: 0,
         }}
@@ -29,11 +43,21 @@ const Index = () => {
       >
         <source src={backgroundvid} />
       </motion.video>
-      <Header></Header>
-      <Main></Main>
-      <Resume></Resume>
-      <Projects></Projects>
-      <Contact></Contact>
+
+      {videoLoaded && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
+          <Header></Header>
+          <Main></Main>
+          <Resume></Resume>
+          <Skills></Skills>
+          <Projects></Projects>
+          <Contact></Contact>
+        </motion.div>
+      )}
     </div>
   );
 };
