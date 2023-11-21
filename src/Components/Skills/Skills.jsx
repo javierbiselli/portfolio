@@ -8,6 +8,7 @@ import {
   FaServer,
 } from "react-icons/fa";
 import { DiMysql, DiFirebase, DiReact } from "react-icons/di";
+import { TbBrandCSharp } from "react-icons/tb";
 import styles from "./skills.module.css";
 
 const Skills = () => {
@@ -34,6 +35,10 @@ const Skills = () => {
             <div className={styles.icon}>
               <DiFirebase />
               <span className={styles.tooltip}>Firebase</span>
+            </div>
+            <div className={styles.icon}>
+              <TbBrandCSharp />
+              <span className={styles.tooltip}>C#</span>
             </div>
           </div>
         </div>
@@ -73,9 +78,6 @@ const Skills = () => {
           </div>
         </div>
       </div>
-      <p style={{ color: "white", textAlign: "center" }}>
-        I'm also learning C and C#
-      </p>
     </div>
   );
 };

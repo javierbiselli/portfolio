@@ -20,9 +20,12 @@ const Projects = () => {
         <div id="Projects" className={styles.projectSectionScroll}></div>
         <h3>Learn about my projects</h3>
         <section>
+          <ProjectsShared id={"CYM"} onClick={onClick} />
+          <ProjectsShared id={"Rocket News"} onClick={onClick} />
+          <ProjectsShared id={"Compra Altoque"} onClick={onClick} />
+          <ProjectsShared id={"Resultados Electorales"} onClick={onClick} />
           <ProjectsShared id={"Divirta"} onClick={onClick} />
           <ProjectsShared id={"Trackgenix"} onClick={onClick} />
-          <ProjectsShared id={"Coming soon..."} onClick={onClick} />
         </section>
       </div>
       <Modal isOpen={showModal} handleClose={() => setShowModal(false)}>

@@ -7,8 +7,9 @@
   align-self: center;
   justify-content: center;
   border: 1px solid white;
+  border-radius: 20px;
   min-height: 50px;
-  height: 40%;
+  height: 200px;
   cursor: pointer;
   transition: 0.3s;
   margin: 10px 0;
@@ -41,7 +42,7 @@
 
 @media only screen and (max-width: 768px) {
   .project {
-    height: 25%;
+    height: 150px;
   }
 
   .project:hover {

@@ -118,7 +118,7 @@ const Main = () => {
         className={styles.getCv}
       >
         <a
-          href="https://drive.google.com/file/d/1mErCMqyNEKNGIWVrAbhSQFgYnSTwRtGK/view?usp=sharing"
+          href="https://drive.google.com/file/d/1FUlDalO09vFtC7n_Rhy8zqwLfYiS94kc/view?usp=sharing"
           target="_blank"
           rel="noreferrer"
         >

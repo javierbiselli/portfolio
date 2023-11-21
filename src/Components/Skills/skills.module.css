@@ -104,6 +104,10 @@
   color: #ffcb2b;
 }
 
+.backEnd .icon:nth-child(5):hover {
+  color: #360092;
+}
+
 .mobile .icon:nth-child(1):hover {
   color: #61dbfb;
 }

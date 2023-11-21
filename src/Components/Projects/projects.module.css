@@ -1,6 +1,6 @@
 .projectsContainer {
   color: white;
-  height: calc(100vh - 85px);
+  min-height: calc(100vh - 85px);
   position: relative;
 }
 
@@ -13,10 +13,13 @@
 
 .projectsContainer section {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  gap: 30px;
   align-items: center;
   flex-wrap: wrap;
   height: calc(100% - 200px);
+  width: 90%;
+  margin: auto;
 }
 
 .projectSectionScroll {
@@ -31,7 +34,7 @@
   }
 
   .projectsContainer {
-    height: calc(100vh - 65px);
+    min-height: calc(100vh - 65px);
   }
 
   .projectSectionScroll {
